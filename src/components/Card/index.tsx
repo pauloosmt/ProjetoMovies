@@ -23,16 +23,20 @@ export default function Card(props: Movies) {
                 <p className="movie-title">
                     {movie.title}
                 </p>
-
-                <Stars
-                    rating={movie.vote_average}
-                />
-
+                {movie.vote_average > 0 &&
+                    <Stars
+                        rating={movie.vote_average}
+                    />
+                }
                 <div className="hidden-content">
-                    <p>
-                        {movie.overview}
+                    {movie.overview && 
+                        <p className="movie-description">
+                        {movie.overview.length > 100
+                            ?`${movie.overview.substring(0,100)}...` //Diminuindo o tamanho da descrição do filme
+                            : movie.overview
+                        }
                     </p>
-
+                    }
                     <button className="btn-default"> Ver Mais </button>
                 </div>
             </div>
