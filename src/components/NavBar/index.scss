@@ -4,8 +4,9 @@
     padding: 12px 3%;
 
     .page-title {
+        font-family: var(--font-oswald);
         background: #e50914;
-        color: black;
+        color: rgb(255, 255, 255);
         cursor: pointer;
     }
 }
