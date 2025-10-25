@@ -1,3 +1,9 @@
-.movie-card {
-    color: white;
+.movie-array {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    list-style: none;
+    width: 100%;
+
+    padding: 1.8rem;
 }

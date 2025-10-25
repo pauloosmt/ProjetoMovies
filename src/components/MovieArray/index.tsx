@@ -31,7 +31,7 @@ export default function MovieArray() {
 
  
     return(
-        <ul className="movie-list">
+        <ul className="movie-array">
             {movies.map((movie) => 
                 <Card
                     key={movie.id}

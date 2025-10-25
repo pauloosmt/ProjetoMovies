@@ -1,6 +1,7 @@
 import { Movie } from "@/src/type"
-import Stars from "../Stars";
+
 import './index.scss';
+import Stars from "../Starts";
 
 export interface Movies {
     movie: Movie
@@ -12,7 +13,7 @@ export default function Card(props: Movies) {
     const movie = props.movie;
     return (
         <li className='card'>
-            <div>
+            <div className="movie-poster">
                 <img src= {`https://image.tmdb.org/t/p/original${movie.poster_path}`} 
                     alt={movie.title}
                 />
@@ -23,7 +24,7 @@ export default function Card(props: Movies) {
                     {movie.title}
                 </p>
 
-                <Stars 
+                <Stars
                     rating={movie.vote_average}
                 />
 
@@ -31,6 +32,8 @@ export default function Card(props: Movies) {
                     <p>
                         {movie.overview}
                     </p>
+
+                    <button className="btn-default"> Ver Mais </button>
                 </div>
             </div>
 
