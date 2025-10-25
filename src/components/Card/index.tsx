@@ -3,7 +3,8 @@
 import { Movie } from "@/src/type"
 import { useRouter } from 'next/navigation';
 import './index.scss';
-import Stars from "../Starts";
+import Stars from "../Stars";
+
 
 export interface Movies {
     movie: Movie
@@ -17,7 +18,7 @@ export default function Card(props: Movies) {
 
     const verMaisClick = () => {
         // Redireciona para a rota de detalhes. 
-        router.push(`/filmes/${movie.id}`);
+        router.push(`/movies/${movie.id}`);
     };
 
     return (

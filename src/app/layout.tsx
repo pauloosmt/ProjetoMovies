@@ -44,7 +44,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${oswald.variable} antialiased`}
       >
-        <NavBar/>
         {children}
       </body>
     </html>

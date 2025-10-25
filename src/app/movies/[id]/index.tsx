@@ -1,10 +1,11 @@
 'use client';
 
+import CardMovie from "@/src/components/PageMovies";
 import { FullMovie, Movie } from "@/src/type";
 import axios from "axios";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-
+import '@/src/components/PageMovies/index.scss';
 
 interface detailMovie extends Movie {
     runtime: number;
@@ -15,7 +16,8 @@ interface detailMovie extends Movie {
 }
 
 export default function DetailMovie () {
-    const { id } = useParams<{ id: string}>();
+
+   const { id } = useParams<{ id: string}>();
     const [movieDetails, setMovieDetails] = useState<FullMovie| null>(null);
 
     useEffect(() => {
@@ -39,9 +41,10 @@ export default function DetailMovie () {
 
     return (
         <div>
-            <h1>{movieDetails.title}</h1>
-            <p>{movieDetails.overview}</p>
+            <CardMovie
+                key={movieDetails.id}
+                movie={movieDetails}
+            />
         </div>
     );
-
 }

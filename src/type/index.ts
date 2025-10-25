@@ -15,4 +15,5 @@ export interface FullMovie extends Movie {
     runtime: number; 
     genres: Genre[]; 
     tagline: string;
+    backdrop_path: string;
 }
