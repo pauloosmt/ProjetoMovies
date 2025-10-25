@@ -1,12 +1,20 @@
 .navbar {
-    background-color: #e50914;
-     color: #fff;
-    padding: 12px 3%;
-
     .page-title {
+        background-color: #e50914;
+        color: #fff;
+        padding: 12px 3%;
         font-family: var(--font-oswald);
         background: #e50914;
         color: rgb(255, 255, 255);
         cursor: pointer;
+    }
+    .subtitle {
+        background-color: rgb(12, 2, 2);
+        color: #fff;
+        font-family: var(--font-nunito);
+        padding: 10px 2.4%;
+        font-size: 1.5em; 
+        margin-top: 18px; 
+        text-align: left;
     }
 }

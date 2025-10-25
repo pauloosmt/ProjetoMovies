@@ -1,5 +1,7 @@
-import { Movie } from "@/src/type"
+'use client';
 
+import { Movie } from "@/src/type"
+import { useRouter } from 'next/navigation';
 import './index.scss';
 import Stars from "../Starts";
 
@@ -11,6 +13,13 @@ export interface Movies {
 
 export default function Card(props: Movies) {
     const movie = props.movie;
+    const router = useRouter();
+
+    const verMaisClick = () => {
+        // Redireciona para a rota de detalhes. 
+        router.push(`/filmes/${movie.id}`);
+    };
+
     return (
         <li className='card'>
             <div className="movie-poster">
@@ -37,7 +46,7 @@ export default function Card(props: Movies) {
                         }
                     </p>
                     }
-                    <button className="btn-default"> Ver Mais </button>
+                    <button className="btn-default" onClick={verMaisClick}> Ver Mais </button>
                 </div>
             </div>
 

@@ -19,7 +19,7 @@ export default function MovieArray() {
     const getMovies = () => {
         axios({
             method: 'get',
-            url: 'https://api.themoviedb.org/3/discover/movie', //URl para pegar filmes populares da API
+            url: 'https://api.themoviedb.org/3/movie/popular', //URl para pegar filmes populares da API
             params: {
                 api_key: process.env.NEXT_PUBLIC_TMDB_KEY,
                 language:'pt-BR'
@@ -28,6 +28,7 @@ export default function MovieArray() {
             setMovies(response.data.results);
         })
     }
+
 
  
     return(
