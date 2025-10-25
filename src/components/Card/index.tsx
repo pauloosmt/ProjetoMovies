@@ -1,5 +1,6 @@
 import { Movie } from "@/src/type"
 import Stars from "../Stars";
+import './index.scss';
 
 export interface Movies {
     movie: Movie
