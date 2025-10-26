@@ -21,7 +21,7 @@ export default function CardMovie(props: Movies) {
                     }}
                 />
                 
-                {/* Conteúdo Principal */}
+                
                 <div className="content-wrapper">
                     
                     {/* Seção Esquerda: Pôster e Infos Rápidas */}
