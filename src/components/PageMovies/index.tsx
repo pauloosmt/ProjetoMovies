@@ -43,7 +43,6 @@ export default function CardMovie(props: Movies) {
                         <p className="movie-tagline">{movie.tagline}</p>
                         
                         <div className="rating-genres">
-                            {/* Aqui entraria seu componente <Stars> ou uma nota simples */}
                             <span className="rating-score">⭐️ {movie.vote_average.toFixed(1)}/10</span>
                             <span className="genres-list">
                                 {movie.genres.map(g => g.name).join(' | ')}

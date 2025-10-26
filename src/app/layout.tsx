@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { Geist, Geist_Mono, Oswald, Nunito} from "next/font/google";
 import "./globals.scss";
-import NavBar from "../components/NavBar";
+import Footer from "../components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +44,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${oswald.variable} antialiased`}
       >
-        {children}
+        <main>{children}</main>
+  
+        <Footer/>
       </body>
     </html>
   );
